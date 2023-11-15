@@ -1,4 +1,13 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "es2022",
+    "moduleResolution": "node",
+    "baseUrl": "https://api.open-meteo.com/v1/forecast",
+    "paths": {
+      "openmeteo": ["node_modules/openmeteo/index.d.ts"]
+    }
+    // Add other compiler options as needed
+  }
 }
